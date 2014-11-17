@@ -1,0 +1,12 @@
+Spis skryptów wykonywalnych:
+----------------------------
+
+epidemia_sis.m - symulacja modelu epidemii SIS (podatny, zainfekowany)
+
+epidemia_sir.m - symulacja modelu epidemii SIR (podatny, zainfekowany, odporny)
+
+epidemia_sirs.m - symulacja modelu epidemii SIRS (podatny, zainfekowany, odporny, podatny)
+
+
+\Program\modele_epidemiologiczne.m - gotowy program okienkowy pozwalaj¹cy na dobór parametrów i symulacjê modeli SIS, SIR oraz SIRS
+

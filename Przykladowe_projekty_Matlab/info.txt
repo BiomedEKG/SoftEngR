@@ -1,0 +1,10 @@
+Hejka wszystkim!
+Dla ³atwiejszego ogara:
+4.8 Modele - to wykonane modele w ³adny i przystêpny sposób przez naszego biomedycznego guru - p. Tadka :) (i pewnie sztab jego murzynów)
+Zatem ma to wiêksze rêce i nogi ani¿eli nasz projekt, który w ramach chêci dokonania zmian przerobi³yœmy na simulinka.
+Choæ najlepiej mo¿ecie odpaliæ sobie oba*. S¹ bardzo podobne, ale ró¿ni¹ siê pewnymi wspó³czynnikami, które na pewno by³yby do ustalenia i ujednolicenia.
+Nasze wypociny w projekcie dotycz¹ te¿ analizy wykresów, wiêc w³aœciwie informacji o samych tych konkretnych 3 modelach nie jest tak du¿o jak siê wydaje ;)
+Oby siê przyda³o,
+enjoy!
+
+*co do odpalenia wiem, ¿e mog¹ byæ jakieœ problemy z racji wersji matlaba -.-
