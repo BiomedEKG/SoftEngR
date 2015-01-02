@@ -1,16 +1,12 @@
 #Z góry wybaczcie za pomieszanie jêzyków - ma³o profesjonalnie, wiem, ale myœlê, ¿e póki co
 #ka¿dy ogarnie, a poza tym - to narazie same komcie dla ³atwiejszego ogaru ;)
 
-#Osobiœcie proponujê zrezygnowanie zarówno z r jak illMates, poniewa¿ w du¿ej mierze
-#ca³a zabawa opiera siê na dobraniu wspó³czynników alpha, beta i gamma, ale mo¿na to 
-#jeszcze wzi¹æ pod rozwagê :)
 
-spreadDisease <- function (cellArray, time, neighborhood, r, illMates, alpha, beta, gamma){
+spreadDisease <- function (cellArray, time, neighborhood, r, alpha, beta, gamma){
   #   cellArray - macierz (matrix) z komorkami, 0 to zdrowi, 1 chorzy, 2 uleczeni,3 to martwi
   #   time - czas symulacji (numeric)
   #   neighborhood - (string) rodzaj sasiedztwa, 'Moore' albo 'Neumann'
   #   r - promien sasiedztwa (numeric)
-  #   illMates - ile zarazonych sasiadow komorki, sprawia, ze komorka moze sie zarazic
   #   alpha - wspolczynnik zarazliwosci(numeric)
   #   beta - wspolczynnik smiertelnosci(numeric)
   #   gamma - wspolczynnik powrotu do zdrowia (numeric)
