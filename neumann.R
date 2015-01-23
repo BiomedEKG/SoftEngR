@@ -8,6 +8,6 @@ distance <- abs(x-i) + abs(y-i)
 rInd <- x[distance<=R]
 cInd <- y[distance<=R]
 ind <- N * (cInd-1) + rInd
-ind <- ind[ind>0 & ind<=(M^2)]
+ind <- ind[ind>0 & ind<=(N^2)]
 ind
 }
