@@ -1,10 +1,9 @@
-moore <- function(i, j, R, M){
-  rInd <- seq(-R, R, 1)
-  cInd <- rInd
-  rInd <- rInd + i
-  cInd <- cInd + j
-  m <- expand.grid(rInd, cInd)
-  ind <- (m[,1]-1)*M + m[,2]
-  ind <- ind[ind>0 & ind<=(M^2)]
-  ind
+moore <- function(R){
+  n <- seq(-R, R, 1)
+ ind <- expand.grid(n, n)
+ z <- ind==0
+ ind2exclude <- z[,1] & z[,2]
+ ind <- ind[c(1:nrow(ind))[-which(ind2exclude == TRUE)], c(1,2)]
+ ind <- do.call(cbind, ind)
+ ind
 }

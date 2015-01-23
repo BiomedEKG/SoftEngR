@@ -1,8 +1,8 @@
 #Set initial parameters
 N <- 51
-cellArray <- initGrid (N, setOutbreak='rand', nrOutbreaks=2)
+cellArray <- initGrid (N, setOutbreak='center', nrOutbreaks=5)
 time <- 30
-neighborhood <- "Neumann"
+neighborhood <- "Moore"
 r <- 1 
 alpha <- 0.5
 beta <- 0.01
