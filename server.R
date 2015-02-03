@@ -6,6 +6,7 @@ source("countCells.R")
 source("neumann.R")
 source("moore.R")
 
+#uewnijcie sie, ze macie wszystkie biblioteki ;)
 
 shinyServer(function(input, output) {
   
