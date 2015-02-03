@@ -6,17 +6,19 @@ source("countCells.R")
 source("neumann.R")
 source("moore.R")
 
+#uewnijcie sie, ze macie wszystkie biblioteki ;)
 
 shinyServer(function(input, output) {
   
   output$siatka <- renderPlot({
     
+      populacja = input$populacja
       postep = input$postep
       alpha = input$zarazliwosc
       beta = input$smiertelnosc
       gamma = input$uzdrowienia
       neighborhood = input$sasiedztwo
-      N = input$populacja #rozmiar siatki / populacji
+      N = round(sqrt(populacja), digits = 0) #rozmiar siatki / populacji
       r = input$promien
       inicj = input$inicjalizacja
       ogniska <- input$ogniska
@@ -53,13 +55,14 @@ shinyServer(function(input, output) {
   
   output$wykres <- renderPlot({
     
+    populacja = input$populacja
     time = input$postep
     czas <-  c(1:time)
     alpha = input$zarazliwosc
     beta = input$smiertelnosc
     gamma = input$uzdrowienia
     neighborhood = input$sasiedztwo
-    N = input$populacja #rozmiar siatki / populacji
+    N = round(sqrt(populacja), digits = 0) #rozmiar siatki / populacji
     r = input$promien
     inicj = input$inicjalizacja
     ogniska <- input$ogniska
@@ -84,7 +87,7 @@ shinyServer(function(input, output) {
       cellArray <- spreadDisease(cellArray, neighborhood, r, alpha, beta, gamma)
     }
     plot.new()
-    plot.window(xlim=c(0,time), ylim = c(0,N^2))
+    plot.window(xlim=c(0,time), ylim = c(0,populacja))
     axis(1)
     axis(2)
     title(main="Numbers over the days")
