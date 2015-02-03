@@ -17,8 +17,8 @@ spreadDisease <- function (cellArray, neighborhood, r, alpha, beta, gamma){
   #Define neighborhood
   # neigh - matrix with indicies of neighbors
   neigh <- switch(neighborhood, 
-         "Moore" =  moore(r), 
-        "Neumann" = neumann(r))
+         "2" =  moore(r), 
+        "1" = neumann(r))
     # iterate over all cells in grid x, for index i=1..N and j=1..N
   for (i in 1:N) {
     for (j in 1:N) {

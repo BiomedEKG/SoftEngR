@@ -21,20 +21,27 @@ initGrid <- function (N, setOutbreak='rand', nrOutbreaks=1)
     #nrOutbreaks is treated as circle's radius value input
     NestCenter <- N/2;
     NestCenter <- ceiling(NestCenter)
-    NestRadius <- nrOutbreaks;
-    if (nrOutbreaks > (NestCenter-1)){
-      warning("Circle exceedes greed's dimension.")
+    NestRadius <- ceiling(sqrt(nrOutbreaks/pi))
+    if (NestRadius > NestCenter-1){
+      NestRadius <-  NestCenter-1;
+      nrOutbreaks <- N*N;
     }
     dim(cellArray) <- c(N,N);
     t(cellArray);
+    counter <-0;
     for (icol in 1:N)
     {
       for (irow in 1:N)
       {
         if ((sqrt((icol-NestCenter)^2 + (irow-NestCenter)^2)) <= NestRadius){
           cellArray[irow,icol] <- 1;
+          counter <- counter +1;
+          if (counter >= nrOutbreaks)
+            break;
         }
       }
+      if (counter >= nrOutbreaks)
+        break;
     }
   }
   

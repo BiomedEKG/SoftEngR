@@ -10,11 +10,11 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel("Parametry",
       sliderInput("populacja", "Wielkość populacji:",
-                  min = 0, max = 100, value = 25),
+                  min = 25, max = 100, value = 25),
       radioButtons("inicjalizacja", label = "Inicjalizacja siatki",
                    choices = list("przypadkowo" = 'rand', "centrum siatki" = 'center'),selected = 'center'),
       sliderInput("ogniska", "Ilość ognisk:",
-                   min = 0, max = 500, value = 100),
+                   min = 1, max = 25, value = 10),
       radioButtons("sasiedztwo", label = "Sąsiedztwo",
                   choices = list("von Neumana" = 1, "Moora" = 2),selected = 1),
       sliderInput("postep", "Postęp epidemii w czasie:", min =  0, max = 100, value = 10, step= 10,

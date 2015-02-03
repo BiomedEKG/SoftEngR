@@ -6,7 +6,7 @@ countCells <- function(cellArray, stats, t){
   cured <- sum(cellArray == 2)
   dead <- sum(cellArray == 3)
   #wpisywanie do macierzy
-  stats[t, "Healthy"] <- healthy+cured
+  stats[t, "Healthy"] <- healthy
   stats[t, "Ill"] <- ill
   stats[t, "Immune"] <- cured
   stats[t, "Dead"] <- dead

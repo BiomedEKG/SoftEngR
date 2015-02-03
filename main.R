@@ -1,4 +1,10 @@
 library('plotrix')
+source("initGrid.R")
+source("spreadDisease.R")
+source("countCells.R")
+source("neumann.R")
+source("moore.R")
+
 #Init 
 N = 50 #rozmair siatki
 time = 100
